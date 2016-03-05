@@ -9,7 +9,7 @@ For more information on installation and configuration, see [the installation gu
 For more information on basic usage, see [the basic usage guide](http://www.mitchellbosecke.com/pebble/documentation/guide/basic-usage).
 
 First, add the following dependency to your pom.xml:
-```XML
+```
 <dependency>
 	<groupId>com.mitchellbosecke</groupId>
 	<artifactId>pebble</artifactId>
@@ -19,8 +19,7 @@ First, add the following dependency to your pom.xml:
 
 Then create a template in your WEB-INF folder. Let's start with a base template that all
 other templates will inherit from, name it "base.html":
-
-```twig
+```
 <html>
 <head>
 	<title>{% block title %}My Website{% endblock %}</title>
@@ -49,7 +48,7 @@ Then create a template that extends base.html, call it "home.html":
 {% endblock %}
 ```
 Now we want to compile the template, and render it:
-```java
+```
 PebbleEngine engine = new PebbleEngine.Builder().build();
 PebbleTemplate compiledTemplate = engine.getTemplate("home.html");
 
@@ -62,7 +61,7 @@ compiledTemplate.evaluate(writer, context);
 String output = writer.toString();
 ```
 The output should result in the following:
-```html
+```
 <html>
 <head>
 	<title> Home </title>
