@@ -1,6 +1,3 @@
-# Documentation
-
-
 ## Guides
 - [Installation and Configuration](documentation/guide/installation)
 - [Spring Integration](documentation/guide/spring-integration)
@@ -8,8 +5,6 @@
 - [Escaping](documentation/guide/escaping)
 - [Extending Pebble](documentation/guide/extending-pebble)
 - [High Performance Techniques](documentation/guide/high-performance)
-
-## Reference
 
 ### Tags
 - [autoescape](documentation/tag/autoescape)
@@ -48,5 +43,25 @@
 - [urlencode](documentation/filter/urlencode)
 
 ## Functions
+- [block](documentation/function/block)
+- [i18n](documentation/function/i18n)
+- [max](documentation/function/max)
+- [min](documentation/function/min)
+- [parent](documentation/function/parent)
 
 ## Tests
+- [empty](documentation/test/empty)
+- [even](documentation/test/even)
+- [map](documentation/test/map)
+- [null](documentation/test/null)
+- [odd](documentation/test/odd)
+- [iterable](documentation/test/iterable)
+
+## Operators
+- [comparisons](documentation/operator/comparisons) (`==`, `!=`, `<`, `>`, `<=`, `>=`, `equals`)
+- [contains](documentation/operator/contains) (`contains`)
+- [is](documentation/operator/is)
+- [logic](documentation/operator/logic) (`and`, `or`, `not`, `()`)
+- [math](documentation/operator/math) (`+`, `-`, `/`, `%`, `*`)
+- [others](documentation/operator/others) (`|`, `?:`)
+
