@@ -1,6 +1,6 @@
 # `macro`
 The `macro` tag allows you to create a chunk of reusable and dynamic content. The macro can be called
-multiple times in the current template or even from another template with the help of the [import](tag) tag.
+multiple times in the current template or even from another template with the help of the [import](import) tag.
 
 It doesn't matter where in the current template you define a macro, i.e. whether it's before or after you call it.
 Here is an example of how to define a macro:
