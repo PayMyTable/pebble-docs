@@ -1,4 +1,4 @@
-# Autoescape
+# `autoescape`
 
 The `autoescape` tag can be used to temporarily disable/re-enable the autoescaper as well as change the
 escaping strategy for a portion of the template.
