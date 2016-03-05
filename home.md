@@ -5,8 +5,8 @@ with it's inheritance feature and it's easy-to-read syntax. It ships with built-
 security, and it includes integrated support for internationalization.
 
 ## Basic Usage
-For more information on installation and configuration, see [the installation guide](http://www.mitchellbosecke.com/pebble/documentation/guide/installation).
-For more information on basic usage, see [the basic usage guide](http://www.mitchellbosecke.com/pebble/documentation/guide/basic-usage).
+For more information on installation and configuration, see [the installation guide](documentation/guide/installation).
+For more information on basic usage, see [the basic usage guide](documentation/guide/basic-usage).
 
 First, add the following dependency to your pom.xml:
 ```
