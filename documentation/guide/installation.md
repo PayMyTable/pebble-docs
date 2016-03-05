@@ -54,10 +54,10 @@ All the settings are set during the construction of the `PebbleEngine` object.
 
 | Setting  | Description | Default |
 | --- | --- | --- |
-| cache | An implementation of a guava cache that the Pebble engine will use to cache compiled templates. If you set the cache to null this will disable all caching and templates will be recompiled with every invocation of engine.getTemplate(...). | An implementation that will hold a maximum of 200 templates.|
-| defaultLocale | The default locale which will be passed to each compiled template. The templates then use this locale for functions such as i18n, etc. A template can also be given a unique locale during evaluation.  | `Locale.getDefault()` |
-| executorService | An `ExecutorService` that allows the usage of some advanced multithreading features, such as the `parallel` tag. | `null` |
-| loader | An implementation of the `Loader` interface which is used to find templates. | An implementation of the `DelegatingLoader` which uses a `ClasspathLoader` and a `FileLoader` behind the scenes. |
-| strictVariables | If set to true, Pebble will throw an exception if you try to access a variable or attribute that does not exist (or an attribute of a null variable). If set to false, your template will treat non-existing variables/attributes as null without ever skipping a beat. | `false` |
+| `cache` | An implementation of a guava cache that the Pebble engine will use to cache compiled templates. If you set the cache to null this will disable all caching and templates will be recompiled with every invocation of engine.getTemplate(...). | An implementation that will hold a maximum of 200 templates.|
+| `defaultLocale` | The default locale which will be passed to each compiled template. The templates then use this locale for functions such as i18n, etc. A template can also be given a unique locale during evaluation.  | `Locale.getDefault()` |
+| `executorService` | An `ExecutorService` that allows the usage of some advanced multithreading features, such as the `parallel` tag. | `null` |
+| `loader` | An implementation of the `Loader` interface which is used to find templates. | An implementation of the `DelegatingLoader` which uses a `ClasspathLoader` and a `FileLoader` behind the scenes. |
+| `strictVariables` | If set to true, Pebble will throw an exception if you try to access a variable or attribute that does not exist (or an attribute of a null variable). If set to false, your template will treat non-existing variables/attributes as null without ever skipping a beat. | `false` |
 
 
