@@ -4,8 +4,6 @@
 There is a fully working example project located on [github](http://github.com/mbosecke/pebble-example-spring)
 which can be used as a reference. It is a very simple and bare-bones project designed to only portray the basics.
 To build the project, simply run `mvn install` and then deploy the resulting war file to a an application container.
-For your convenience, a built version of the example project is currently being hosted
-[here](http://www.mitchellbosecke.com/pebble-example-spring).
 
 ## Setup
 First of all, make sure your project includes the `pebble-spring3` dependency.
