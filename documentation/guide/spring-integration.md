@@ -11,7 +11,7 @@ This will provide the necessary `ViewResolver` and `View` classes.
 ```
 <dependency>
 	<groupId>com.mitchellbosecke</groupId>
-	<artifactId>pebble-spring3</artifact>
+	<artifactId>pebble-spring3</artifactId>
 	<version>${pebble.version}</version>
 </dependency>
 ```
