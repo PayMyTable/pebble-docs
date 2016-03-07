@@ -30,10 +30,18 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public Loader templateLoader(){
         return new ServletLoader(servletContext);
     }
-
+    
     @Bean
+    public SpringExtension springExtension() {
+        return new SpringExtension();
+    }
+
+    @Bean 
     public PebbleEngine pebbleEngine() {
-        return new PebbleEngine(templateLoader());
+         return new PebbleEngine.Builder()
+                .loader(this.templateLoader())
+                .extension(springExtension())
+                .build();
     }
 
     @Bean
@@ -88,4 +96,53 @@ HttpRequest is available like this. Really useful to get the context path when o
 HttpSession is available like this:
 ```
 {{ session.maxInactiveInterval }}
+```
+
+## Spring extension
+
+This extension has many functions for spring validation and the use of message bundle.
+
+#### Message function
+It achieves the same thing as the i18n function, but instead, it uses the configured spring messageSource, typically the ResourceBundleMessageSource.
+
+```
+Label = {{ message('label.test') }}
+Label with params = {{ message('label.test.params', 'params1', 'params2') }}
+```
+
+#### Spring validations and error messages
+6 validations methods and error messages are exposed using spring BindingResult. It needs as a parameter the form name and for a particular field, the field name.
+
+To check if there's any error:
+```
+{{ hasErrors('formName' }}
+
+{{ hasGlobalErrors('formName' }}
+
+{{ hasFieldErrors('formName', 'fieldName' }}
+```
+
+To output any error:
+```
+{% for err in getAllErrors('formName') %}
+    <p>{{ err }}</p>
+{% endfor %}
+
+{% for err in getGlobalErrors('formName') %}
+    <p>{{ err }}</p>
+{% endfor %}
+
+{% for err in getFieldErrors('formName', 'fieldName') %}
+    <p>{{ err }}</p>
+{% endfor %}
+```
+
+## Timer
+
+A timer in PebbleView is available to output the time taken to process a template. Just add the following config to your log4j.xml
+
+```xml
+<Logger name="com.mitchellbosecke.pebble.spring.PebbleView.timer" level="DEBUG" additivity="false">
+      <AppenderRef ref="STDOUT" />
+</Logger> 
 ```
