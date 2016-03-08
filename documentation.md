@@ -9,6 +9,7 @@
 ### Tags
 - [autoescape](documentation/tag/autoescape)
 - [block](documentation/tag/block)
+- [cache](documentation/tag/cache)
 - [extends](documentation/tag/extends)
 - [filter](documentation/tag/filter)
 - [flush](documentation/tag/flush)
@@ -52,7 +53,6 @@
 - [range](documentation/function/range)
 
 ## Tests
-- [cache](documentation/test/cache)
 - [empty](documentation/test/empty)
 - [even](documentation/test/even)
 - [map](documentation/test/map)
