@@ -16,6 +16,6 @@ Cache implementation can be overriden with the PebbleEngine Builder.
 ```
  return new PebbleEngine.Builder()
                 .loader(this.templateLoader())
-                .tagCache(CacheBuilder.newBuilder().maximumSize(200).expireAfterWrite(5, TimeUnit.MINUTES).build())
+                .tagCache(CacheBuilder.newBuilder().maximumSize(200).build())
                 .build();
 ```
