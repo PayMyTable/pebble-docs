@@ -31,6 +31,7 @@
 - [first](documentation/filter/first)
 - [join](documentation/filter/join)
 - [last](documentation/filter/last)
+- [length](documentation/filter/length)
 - [lower](documentation/filter/lower)
 - [numberformat](documentation/filter/numberformat)
 - [raw](documentation/filter/raw)
@@ -48,8 +49,10 @@
 - [max](documentation/function/max)
 - [min](documentation/function/min)
 - [parent](documentation/function/parent)
+- [range](documentation/function/range)
 
 ## Tests
+- [cache](documentation/test/cache)
 - [empty](documentation/test/empty)
 - [even](documentation/test/even)
 - [map](documentation/test/map)
