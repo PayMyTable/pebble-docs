@@ -1,17 +1,19 @@
-# Integration with Spring 3
+# Integration with Spring
 
 ## Example
-There is a fully working example project located on [github](http://github.com/mbosecke/pebble-example-spring)
+There is a fully working example project located on [github](http://github.com/PebbleTemplates/pebble-example-spring)
 which can be used as a reference. It is a very simple and bare-bones project designed to only portray the basics.
 To build the project, simply run `mvn install` and then deploy the resulting war file to a an application container.
 
 ## Setup
-First of all, make sure your project includes the `pebble-spring3` dependency.
+Pebble has integration for both versions 3.x and 4.x of the Spring Framework, provided by two separate libraries called pebble-spring3 and pebble-spring4.
+
+First of all, make sure your project includes the `pebble-spring3` or `pebble-spring4` dependency.
 This will provide the necessary `ViewResolver` and `View` classes.
 ```
 <dependency>
 	<groupId>com.mitchellbosecke</groupId>
-	<artifactId>pebble-spring3</artifactId>
+	<artifactId>pebble-spring{version}</artifactId>
 	<version>${pebble.version}</version>
 </dependency>
 ```
@@ -81,19 +83,25 @@ in the evaluation context.
 ## Features
 
 ### Access to Spring beans
-Spring beans are now available to the template:
+Spring beans are now available to the template.
 ```
 {{ beans.beanName }}
 ```
 
 ### Access to http request
-HttpRequest is available like this. Really useful to get the context path when outputting href.
+HttpServletRequest object is available to the template.
 ```
 {{ request.contextPath }}
 ```
 
+### Access to http response
+HttpServletResponse is available to the template.
+```
+{{ response.contentType }}
+```
+
 ### Access to http session
-HttpSession is available like this:
+HttpSession is available to the template.
 ```
 {{ session.maxInactiveInterval }}
 ```
