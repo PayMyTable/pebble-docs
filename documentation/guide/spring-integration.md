@@ -110,6 +110,13 @@ HttpSession is available to the template.
 
 This extension has many functions for spring validation and the use of message bundle.
 
+#### Href function
+Function to automatically add the context path to a given url
+
+```
+<a href="{{ href('/foobar') }}">Example</a>
+```
+
 #### Message function
 It achieves the same thing as the i18n function, but instead, it uses the configured spring messageSource, typically the ResourceBundleMessageSource.
 
