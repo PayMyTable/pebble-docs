@@ -27,7 +27,7 @@
 - [abs](documentation/filter/abs)
 - [capitalize](documentation/filter/capitalize)
 - [date](documentation/filter/date)
-- [defalt](documentation/filter/default)
+- [default](documentation/filter/default)
 - [escape](documentation/filter/escape)
 - [first](documentation/filter/first)
 - [join](documentation/filter/join)
