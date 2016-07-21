@@ -9,3 +9,10 @@ Top Content
 Bottom Content
 {% include "footer" %}
 ```
+
+You can add additional variables to the context of the included template by passing a map after the `with` keyword. The included template will have access to the same variables that the current template does plus the additional ones defined in the map passed after the `with` keyword:
+
+```
+{% include "advertisement" with {"foo":"bar"} %}
+```
+
