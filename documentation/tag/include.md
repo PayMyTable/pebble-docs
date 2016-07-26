@@ -16,3 +16,8 @@ You can add additional variables to the context of the included template by pass
 {% include "advertisement" with {"foo":"bar"} %}
 ```
 
+## Dynamic Include
+The `include` tag will accept an expression to determine the template to include at runtime. For example:
+```
+{% include admin ? 'adminFooter' : 'defaultFooter' %}
+```
