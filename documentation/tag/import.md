@@ -8,3 +8,11 @@ Assuming that a macro named `input` exists in a template called `form_util` you 
 
 {{ input("text", "name", "Mitchell") }}
 ```
+
+## Dynamic Import
+The `import` tag will accept an expression to determine the template to import at runtime. For example:
+```
+{% import modern ? 'ajax_form_util' : 'simple_form_util' %}
+
+{{ input("text", "name", "Mitchell") }}
+```
