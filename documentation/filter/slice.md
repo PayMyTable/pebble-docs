@@ -11,4 +11,4 @@ The `slice` filter returns a portion of a list, array, or string.
 
 ## Arguments
 - `fromIndex`: 0-based and inclusive
-- `toIndex`: 0-based and inclusive
+- `toIndex`: 0-based and exclusive
